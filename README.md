@@ -74,4 +74,4 @@ For inquiries and support, contact us at **contact@aaapvtltd.com** or visit our 
 
 ---
 
-⭐ **Developed by [Your Name]**
+⭐ **Developed by Harsha Tharuka**
