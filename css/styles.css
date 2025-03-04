@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  transition: 0.4s ease;
+}
+
+/* Navigation Bar */
+.navbar {
+  padding: 15px;
+  letter-spacing: 4px;
+  font-family: "Raleway", sans-serif;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Fixed Navigation Bar */
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 50px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  backface-visibility: hidden;
+  transition: 0.35s ease;
+}
+.fixed-nav-bar .logo {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  color: #ccc;
+  font-size: 28px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.fixed-nav-bar .logo span {
+  color: #e78533;
+  font-weight: 600;
+}
+.fixed-nav-bar.scrolled {
+  min-height: 60px;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.6);
+}
+.fixed-nav-bar.scrolled .logo {
+  color: black;
+}
+.fixed-nav-bar.scrolled .menu-button-label .white-bar {
+  background-color: black;
+}
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  background: url("../images/hero-bg1.jpg") no-repeat center center/cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+/* Service Cards */
+.card {
+  transition: transform 0.3s ease-in-out;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Testimonials */
+.carousel-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter Section */
+input[type="email"] {
+  max-width: 400px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+.footer {
+  min-height: 100px;
+  background-color: #282828;
+  box-sizing: border-box;
+  border-top: 6px solid #e78533;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text */
+}
+
+/* Social Buttons Container */
+.social-buttons-container {
+  min-height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+/* Social Button */
+.social-button {
+  display: inline-block;
+  position: relative;
+  transform: scale(0.75);
+  height: 75px;
+  width: 75px;
+  background-size: cover !important;
+  transition: 0.3s ease;
+  margin: 14px 2px;
+  cursor: pointer;
+}
+.social-button:hover {
+  transform: scale(1);
+  transition: 0.3s cubic-bezier(0.3, 0.2, 0, 2.5);
+}
+.social-button.twitter-button {
+  background: url("https://cdn4.iconfinder.com/data/icons/social-icon-4/842/twitter-256.png")
+    no-repeat center;
+}
+.social-button.facebook-button {
+  background: url("https://cdn4.iconfinder.com/data/icons/social-icon-4/842/facebook-256.png")
+    no-repeat center;
+}
+.social-button.pinterest-button {
+  background: url("https://cdn4.iconfinder.com/data/icons/social-icon-4/842/pinterest-256.png")
+    no-repeat center;
+}
+.social-button.insta-button {
+  background: url("https://cdn4.iconfinder.com/data/icons/social-icon-4/842/instagram-256.png")
+    no-repeat center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  .fixed-nav-bar .logo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .deer-section {
+    min-height: 660px;
+    background-position: right bottom;
+    background-size: 300px 425px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .social-buttons-container {
+    max-width: 200px;
+  }
+  .footer-links-container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    align-items: center; /* Center columns vertically */
+  }
+}
